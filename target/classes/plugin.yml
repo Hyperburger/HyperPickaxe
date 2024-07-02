@@ -1,5 +1,5 @@
 name: HyperPickaxe
-version: '1.03'
+version: '1.04'
 main: me.hyperburger.pickaxe3.HyperPickaxe
 api-version: '1.13'
 commands:

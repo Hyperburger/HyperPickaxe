@@ -34,20 +34,25 @@ public class BlockBreakListener implements Listener {
         if (itemMeta == null) {
             return;
         }
+
+        // Define keys for pickaxe properties
         final NamespacedKey widthKey = new NamespacedKey(plugin, "width");
         final NamespacedKey heightKey = new NamespacedKey(plugin, "height");
-        NamespacedKey depthKey = new NamespacedKey(plugin, "depth");
+        final NamespacedKey depthKey = new NamespacedKey(plugin, "depth");
 
         PersistentDataContainer dataContainer = itemMeta.getPersistentDataContainer();
+
+        // Check if the item is a HyperPickaxe
         if (dataContainer.has(new NamespacedKey(plugin, "width"), PersistentDataType.INTEGER) &&
                 dataContainer.has(new NamespacedKey(plugin, "height"), PersistentDataType.INTEGER) &&
                 dataContainer.has(new NamespacedKey(plugin, "depth"), PersistentDataType.INTEGER)) {
 
+            // Retrieve pickaxe dimensions
             Optional<Integer> width = Optional.ofNullable(dataContainer.get(widthKey, PersistentDataType.INTEGER));
             Optional<Integer> height = Optional.ofNullable(dataContainer.get(heightKey, PersistentDataType.INTEGER));
             Optional<Integer> depth = Optional.ofNullable(dataContainer.get(depthKey, PersistentDataType.INTEGER));
 
-            // Break blocks in the specified area
+            // Break blocks in the specified area if all dimensions are present
             if (width.isPresent() && height.isPresent() && depth.isPresent()) {
                 breakBlocksInArea(block, player, width.get(), height.get(), depth.get());
             }
@@ -62,15 +67,15 @@ public class BlockBreakListener implements Listener {
         // Calculate the starting and ending points for each dimension
         int startX = baseX - (width / 2);
         int endX = baseX + (width / 2);
-        int startY = baseY - (height / 2);
-        int endY = baseY + (height / 2);
+        int startY = baseY - (height - 1);
+//        int endY = baseY;
         int startZ = baseZ - (depth / 2);
         int endZ = baseZ + (depth / 2);
 
 
         // Iterate over the defined area
         for (int x = startX; x <= endX; x++) {
-            for (int y = startY; y <= endY; y++) {
+            for (int y = baseY; y > baseY - height; y--) {
                 for (int z = startZ; z <= endZ; z++) {
                     Block adjacentBlock = block.getWorld().getBlockAt(x, y, z);
                     if (adjacentBlock.getType() != Material.AIR) {
