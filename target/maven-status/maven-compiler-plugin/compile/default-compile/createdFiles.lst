@@ -1,0 +1,5 @@
+me\hyperburger\pickaxe3\utils\PickaxeUtils.class
+me\hyperburger\pickaxe3\HyperPickaxe.class
+me\hyperburger\pickaxe3\listeners\BlockBreakListener.class
+me\hyperburger\pickaxe3\commands\GivePickaxeCommand.class
+me\hyperburger\pickaxe3\utils\Color.class
