@@ -8,16 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import me.hyperburger.pickaxe3.HyperPickaxe;
-import me.hyperburger.pickaxe3.utils.Color;
-import me.hyperburger.pickaxe3.utils.PickaxeUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 public class GivePickaxeCommand implements CommandExecutor {
 

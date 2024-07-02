@@ -6,7 +6,7 @@
 
   <groupId>me.hyperburger</groupId>
   <artifactId>HyperPickaxe</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.02</version>
   <packaging>jar</packaging>
 
   <name>HyperPickaxe</name>

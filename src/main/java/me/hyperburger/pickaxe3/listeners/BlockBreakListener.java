@@ -25,7 +25,7 @@ public class BlockBreakListener implements Listener {
     }
 
     @EventHandler
-    public void onBlockBreak(BlockBreakEvent event) {
+    public void onBlockBreak(final BlockBreakEvent event) {
         final Block block = event.getBlock();
         final Player player = event.getPlayer();
         final ItemStack playerItemInHand = player.getInventory().getItemInMainHand();
@@ -52,12 +52,6 @@ public class BlockBreakListener implements Listener {
                 breakBlocksInArea(block, player, width.get(), height.get(), depth.get());
             }
         }
-        /*
-
-            ---
-            ---
-            ---
-         */
     }
 
     private void breakBlocksInArea(Block block, Player player, int width, int height, int depth) {
