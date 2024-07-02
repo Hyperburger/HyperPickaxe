@@ -1,7 +1,7 @@
 name: HyperPickaxe
 version: '${project.version}'
 main: me.hyperburger.pickaxe3.HyperPickaxe
-api-version: '1.21'
+api-version: '1.13'
 commands:
   givepickaxe:
     permission: hyperpickaxe.give
