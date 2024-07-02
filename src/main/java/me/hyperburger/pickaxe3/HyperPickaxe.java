@@ -12,6 +12,7 @@ public final class HyperPickaxe extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
         getServer().getPluginManager().registerEvents(new BlockBreakListener(this), this);
         this.getCommand("givepickaxe").setExecutor(new GivePickaxeCommand(this));
 
