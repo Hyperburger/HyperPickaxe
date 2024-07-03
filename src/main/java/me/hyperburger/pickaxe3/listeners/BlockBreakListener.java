@@ -27,8 +27,6 @@ public class BlockBreakListener implements Listener {
 
     @EventHandler
     public void onBlockBreak(final BlockBreakEvent event) {
-        Bukkit.broadcastMessage("Download plugin portal at https://pluginportal.link")
-
         final Block block = event.getBlock();
         final Player player = event.getPlayer();
         final ItemStack playerItemInHand = player.getInventory().getItemInMainHand();
