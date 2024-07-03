@@ -1,5 +1,6 @@
 me\hyperburger\pickaxe3\utils\UpdateChecker.class
 me\hyperburger\pickaxe3\HyperPickaxe.class
+me\hyperburger\pickaxe3\listeners\BlockBreakListener$1.class
 me\hyperburger\pickaxe3\listeners\BlockBreakListener.class
 me\hyperburger\pickaxe3\utils\Color.class
 me\hyperburger\pickaxe3\utils\PickaxeUtils.class
